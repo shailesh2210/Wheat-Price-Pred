@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheat Price Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand text-light">
+        <div class="container justify-content-center ">
+            <a class="navbar-brand " href="#">Wheat Price Prediction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/predict">Prediction</a>
+                    </li> -->
+                </ul>
+                <a href="https://linkedin.com/in/shaileshgaddam"><span class="navbar-brand mb-0 h1">LinkedIn</span></a>
+                <a href="https://github.com/shailesh2210"><span class="navbar-brand mb-0 h1">Github</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="background" style="background-color: #0b0704e9;">
+        <br>
+        <br>
+        <div class="container justify-content-center col-lg-4">
+            <div class="card text-center" style="width: 30rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Wheat Price Project</h5>
+                    <form class="container" action="{{ url_for('predict') }}" method="POST">
+                        <div class="mb-3">
+                            <label for="state" class="form-label">State</label>
+                            <select name="state" id="state" class="form-select">
+                                <option value="#">Select States</option>
+                                <option value="0">Bihar</option>
+                                <option value="1">West Bengal</option>
+                                <option value="2">Karnataka</option>
+                                <option value="3">Rajasthan</option>
+                                <option value="4">Gujarat</option>
+                                <option value="5">Madhya Pradesh</option>
+                                <option value="6">Maharashtra</option>
+                                <option value="7">Uttar Pradesh</option>
+                            </select>
+
+                            <label for="variety" class="form-label">Variety</label>
+                            <select name="variety" id="variety" class="form-select">
+                                <option value="#">Variety Options</option>
+                                <option value="0">147 Average</option>
+                                <option value="1">Dara</option>
+                                <option value="2">Deshi</option>
+                                <option value="3">Hybrid</option>
+                                <option value="4">Jawari</option>
+                                <option value="5">Kalyan</option>
+                                <option value="6">Local</option>
+                                <option value="7">Lokwan</option>
+                                <option value="8">Lokwan Gujarat</option>
+                                <option value="9">Maharashtra 2189</option>
+                                <option value="10">Medium</option>
+                                <option value="11">Mexican</option>
+                                <option value="12">Mill Quality</option>
+                                <option value="13">Other</option>
+                                <option value="14">PBW-373</option>
+                                <option value="15">Red</option>
+                                <option value="16">Sharbati</option>
+                                <option value="17">Sona</option>
+                                <option value="18">Sonalika</option>
+                                <option value="19">Super Fine</option>
+                            </select>
+
+                            <label for="district" class="form-label">District</label>
+                            <select name="district" id="district" class="form-select">
+                                <option value="#">Select District</option>
+                                <option value="0">Muzaffarpur</option>
+                                <option value="1">Amreli</option>
+                                <option value="2">Anand</option>
+                                <option value="3">Banaskanth</option>
+                                <option value="4">Dahod</option>
+                                <option value="5">Gandhinagar</option>
+                                <option value="6">Jamnagar</option>
+                                <option value="7">Junagarh</option>
+                                <option value="8">Mehsana</option>
+                                <option value="9">Patan</option>
+                                <option value="10">Rajkot</option>
+                                <option value="11">Surendranagar</option>
+                                <option value="12">Bangalore</option>
+                                <option value="13">Bidar</option>
+                                <option value="14">Bijapur</option>
+                                <option value="15">Dharwad</option>
+                                <option value="16">Gadag</option>
+                                <option value="17">Shimoga</option>
+                                <option value="18">Ashoknagar</option>
+                                <option value="19">Betul</option>
+                                <option value="20">Bhopal</option>
+                                <option value="21">Chhatarpur</option>
+                                <option value="22">Datia</option>
+                                <option value="23">Dewas</option>
+                                <option value="24">Dhar</option>
+                                <option value="25">Guna</option>
+                                <option value="26">Harda</option>
+                                <option value="27">Hoshangabad</option>
+                                <option value="28">Indore</option>
+                                <option value="29">Katni</option>
+                                <option value="30">Khandwa</option>
+                                <option value="31">Khargone</option>
+                                <option value="32">Mandsaur</option>
+                                <option value="33">Narsinghpur</option>
+                                <option value="34">Panna</option>
+                                <option value="35">Rajgarh</option>
+                                <option value="36">Ratlam</option>
+                                <option value="37">Rewa</option>
+                                <option value="38">Sagar</option>
+                                <option value="39">Satna</option>
+                                <option value="40">Sehore</option>
+                                <option value="41">Shivpuri</option>
+                                <option value="42">Tikamgarh</option>
+                                <option value="43">Vidisha</option>
+                                <option value="44">Ahmednagar</option>
+                                <option value="45">Akola</option>
+                                <option value="46">Amarawati</option>
+                                <option value="47">Aurangabad</option>
+                                <option value="48">Beed</option>
+                                <option value="49">Buldhana</option>
+                                <option value="50">Dhule</option>
+                                <option value="51">Hingoli</option>
+                                <option value="52">Jalana</option>
+                                <option value="53">Jalgaon</option>
+                                <option value="54">Latur</option>
+                                <option value="55">Nagpur</option>
+                                <option value="56">Nanded</option>
+                                <option value="57">Nandurbar</option>
+                                <option value="58">Nashik</option>
+                                <option value="59">Parbhani</option>
+                                <option value="60">Pune</option>
+                                <option value="61">Sangli</option>
+                                <option value="62">Sholapur</option>
+                                <option value="63">Thane</option>
+                                <option value="64">Vashim</option>
+                                <option value="65">Wardha</option>
+                                <option value="66">Yavatmal</option>
+                                <option value="67">Ajmer</option>
+                                <option value="68">Alwar</option>
+                                <option value="69">Baran</option>
+                                <option value="70">Bharatpur</option>
+                                <option value="71">Bhilwara</option>
+                                <option value="72">Dausa</option>
+                                <option value="73">Ganganagar</option>
+                                <option value="74">Jhalawar</option>
+                                <option value="75">Kota</option>
+                                <option value="76">Swai Madhopur</option>
+                                <option value="77">Tonk</option>
+                                <option value="78">Agra</option>
+                                <option value="79">Aligarh</option>
+                                <option value="80">Allahabad</option>
+                                <option value="81">Ambedkarnagar</option>
+                                <option value="82">Auraiya</option>
+                                <option value="83">Azamgarh</option>
+                                <option value="84">Badaun</option>
+                                <option value="85">Bahraich</option>
+                                <option value="86">Ballia</option>
+                                <option value="87">Balrampur</option>
+                                <option value="88">Banda</option>
+                                <option value="89">Barabanki</option>
+                                <option value="90">Bareilly</option>
+                                <option value="91">Bijnor</option>
+                                <option value="92">Bulandshahar</option>
+                                <option value="93">Chandauli</option>
+                                <option value="94">Chitrakut</option>
+                                <option value="95">Deoria</option>
+                                <option value="96">Etah</option>
+                                <option value="97">Etawah</option>
+                                <option value="98">Faizabad</option>
+                                <option value="99">Farukhabad</option>
+                                <option value="100">Fatehpur</option>
+                                <option value="101">Firozabad</option>
+                                <option value="102">Gautam Budh Nagar</option>
+                                <option value="103">Ghaziabad</option>
+                                <option value="104">Ghazipur</option>
+                                <option value="105">Gonda</option>
+                                <option value="106">Gorakhpur</option>
+                                <option value="107">Hamirpur</option>
+                                <option value="108">Hardoi</option>
+                                <option value="109">Hathras</option>
+                                <option value="110">Jalaun (Orai)</option>
+                                <option value="111">Jaunpur</option>
+                                <option value="112">Jhansi</option>
+                                <option value="113">Jyotiba Phule Nagar</option>
+                                <option value="114">Kannuj</option>
+                                <option value="115">Kanpur</option>
+                                <option value="116">Khiri (Lakhimpur)</option>
+                                <option value="117">Lakhimpur</option>
+                                <option value="118">Lalitpur</option>
+                                <option value="119">Lucknow</option>
+                                <option value="120">Maharajganj</option>
+                                <option value="121">Mahoba</option>
+                                <option value="122">Mainpuri</option>
+                                <option value="123">Mathura</option>
+                                <option value="124">Meerut</option>
+                                <option value="125">Mirzapur</option>
+                                <option value="126">Muradabad</option>
+                                <option value="127">Muzaffarnagar</option>
+                                <option value="128">Padrauna(Kusinagar)</option>
+                                <option value="129">Pillibhit</option>
+                                <option value="130">Pratapgarh</option>
+                                <option value="131">Raebarelli</option>
+                                <option value="132">Rampur</option>
+                                <option value="133">Saharanpur</option>
+                                <option value="134">Shahjahanpur</option>
+                                <option value="135">Siddharth Nagar</option>
+                                <option value="136">Sitapur</option>
+                                <option value="137">Sonbhadra</option>
+                                <option value="138">Sultanpur</option>
+                                <option value="139">Unnao</option>
+                                <option value="140">Bankura</option>
+                                <option value="141">Birbhum</option>
+                            </select>
+
+                            <label for="min_price" class="form-label">Min Price</label>
+                            <input type="text" id="min_price" name="min_price" class="form-control"
+                                placeholder="Min Price">
+
+                            <label for="max_price" class="form-label">Max Price</label>
+                            <input type="text" id="max_price" name="max_price" class="form-control"
+                                placeholder="Max Price">
+                        </div>
+
+                        <button type="submit" class="btn btn-dark">Predict</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+            </script>
+    </div>
+</body>
+
+</html>
