@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 
 # model = pickle.load(open("rf_model.pkl", "rb"))
-model = pickle.load(open("lg_model.pkl", "rb"))
+model = pickle.load(open("models\lg_model.pkl", "rb"))
 
 app = Flask(__name__)
 
