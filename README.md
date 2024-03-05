@@ -12,6 +12,19 @@ The primary goal of this machine learning project is to develop a robust predict
 8. Deployment using Flask
 9. Docker
 
+## Who can take benefits of this project
+### Farmers:
+ Farmers can use the predictive model to anticipate market prices for different wheat varieties in their region. This information can assist them in making decisions regarding planting, harvesting, and selling their crops, optimizing their profits.
+
+### Traders and Buyers: 
+Traders and buyers in the wheat market can utilize the predictive model to forecast price fluctuations, allowing them to make informed decisions regarding purchasing and selling wheat stocks. This helps them optimize procurement strategies and maximize profits.
+
+### Government Agencies: 
+Government agencies responsible for agricultural policies and interventions can leverage the predictive model to monitor market trends and plan interventions effectively. This can include implementing price stabilization measures, formulating policies to support farmers, and ensuring food security.
+
+### Researchers and Analysts: 
+Researchers and analysts studying agricultural economics can use the predictive model to gain insights into the dynamics of the wheat market, identify factors influencing price movements, and explore trends across different regions and wheat varieties.
+
 ## To access this project
 ### Setup 1: Clone the repo
 ``` setup
