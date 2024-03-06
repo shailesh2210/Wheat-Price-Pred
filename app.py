@@ -21,7 +21,7 @@ def predict():
 
     data = ([[state, district, variety, min_price, max_price]])
     prediction = model.predict(data)  # Extracting the prediction from the array
-    print(prediction)
+    print(np.round(prediction,2))
 
     return render_template("predict.html", prediction = np.round(prediction,2))
 
