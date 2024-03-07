@@ -14,7 +14,7 @@ The primary goal of this machine learning project is to develop a robust predict
 
 ## Who can take benefits of this project
 ### Farmers:
- Farmers can use the predictive model to anticipate market prices for different wheat varieties in their region. This information can assist them in making decisions regarding planting, harvesting, and selling their crops, optimizing their profits.
+Farmers can use the predictive model to anticipate market prices for different wheat varieties in their region. This information can assist them in making decisions regarding planting, harvesting, and selling their crops, optimizing their profits.
 
 ### Traders and Buyers: 
 Traders and buyers in the wheat market can utilize the predictive model to forecast price fluctuations, allowing them to make informed decisions regarding purchasing and selling wheat stocks. This helps them optimize procurement strategies and maximize profits.
