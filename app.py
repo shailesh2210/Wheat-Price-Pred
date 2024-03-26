@@ -24,7 +24,7 @@ def predict():
     print(np.round(prediction,2))
 
     return render_template("predict.html", prediction = np.round(prediction,2))
-
+    
     # return render_template("predict.html", prediction="No data submitted.")
 
 if __name__ == "__main__":
